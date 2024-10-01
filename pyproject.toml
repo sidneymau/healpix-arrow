@@ -1,0 +1,13 @@
+[project]
+name = "healpix-arrow"
+license = {file = "LICENSE"}
+readme = "README.md"
+description = ""
+authors = [
+    {name = "Sidney Mau", email = "sidneymau@gmail.com" }
+]
+dynamic = ["version"]
+dependencies = [
+    "healpy",
+    "pyarrow",
+]
