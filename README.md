@@ -11,7 +11,7 @@ Use of the HEALPix/healpy software package should be explicitly acknowledged in 
 * at the first use of the HEALPix acronym, a footnote placed in the main body of the paper referring to the HEALPix website – currently http://healpix.sourceforge.net
 
 BibTeX record:
-
+```
 @article{Zonca2019,
   doi = {10.21105/joss.01298},
   url = {https://doi.org/10.21105/joss.01298},
@@ -25,7 +25,8 @@ BibTeX record:
   title = {healpy: equal area pixelization and spherical harmonics transforms for data on the sphere in Python},
   journal = {Journal of Open Source Software}
 }
-
+```
+```
 @ARTICLE{2005ApJ...622..759G,
    author = {{G{\'o}rski}, K.~M. and {Hivon}, E. and {Banday}, A.~J. and 
 	{Wandelt}, B.~D. and {Hansen}, F.~K. and {Reinecke}, M. and 
@@ -42,3 +43,4 @@ BibTeX record:
    adsurl = {http://adsabs.harvard.edu/abs/2005ApJ...622..759G},
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
+```
