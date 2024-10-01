@@ -13,6 +13,8 @@ function_docs = {
 input_types = {
    "nside" : pa.int64(),
    "ipix" : pa.int64(),
+   "nest": pa.bool_(),
+   "lonlat": pa.bool_(),
 }
 # TODO would a list output be more appropriate?
 output_type = pa.struct(
@@ -23,12 +25,12 @@ output_type = pa.struct(
 )
 
 
-def pix2ang_wrapper(ctx, nside, ipix):
+def pix2ang_wrapper(ctx, nside, ipix, nest, lonlat):
     if isinstance(nside, pa.Scalar):
         nside = nside.as_py()
     if isinstance(ipix, pa.Scalar):
         ipix = ipix.as_py()
-    theta, phi = hp.pix2ang(nside, ipix, lonlat=True)
+    theta, phi = hp.pix2ang(nside, ipix, nest=nest, lonlat=lonlat)
     return pa.StructArray.from_arrays(
         (pa.array(theta), pa.array(phi)),
         names=("theta", "phi"),
