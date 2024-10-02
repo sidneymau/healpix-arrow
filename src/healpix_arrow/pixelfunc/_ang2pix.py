@@ -24,9 +24,13 @@ def ang2pix_wrapper(ctx, nside, theta, phi, nest, lonlat):
     if isinstance(nside, pa.Scalar):
         nside = nside.as_py()
     if isinstance(theta, pa.Scalar):
-        theta = nside.as_py()
+        theta = theta.as_py()
     if isinstance(phi, pa.Scalar):
-        phi = nside.as_py()
+        phi = phi.as_py()
+    if isinstance(nest, pa.Scalar):
+        nest = nest.as_py()
+    if isinstance(lonlat, pa.Scalar):
+        lonlat = lonlat.as_py()
     ipix = hp.ang2pix(nside, theta, phi, nest=nest, lonlat=lonlat)
     return pa.array(ipix)
 

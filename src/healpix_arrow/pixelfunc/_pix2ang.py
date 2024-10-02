@@ -30,6 +30,10 @@ def pix2ang_wrapper(ctx, nside, ipix, nest, lonlat):
         nside = nside.as_py()
     if isinstance(ipix, pa.Scalar):
         ipix = ipix.as_py()
+    if isinstance(nest, pa.Scalar):
+        nest = nest.as_py()
+    if isinstance(lonlat, pa.Scalar):
+        lonlat = lonlat.as_py()
     theta, phi = hp.pix2ang(nside, ipix, nest=nest, lonlat=lonlat)
     return pa.StructArray.from_arrays(
         (pa.array(theta), pa.array(phi)),
